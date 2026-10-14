@@ -1,0 +1,24 @@
+exception_id,order_id,product_id,exception_type,severity,owner,stage,description,status,created_ts,resolved_ts,resolution
+EX010,ORD0093,,Box Misplaced,Medium,Warehouse Team,Staging,Packed order could not be found in staging.,Open,2026-10-06 18:00:00.000000,,No action yet.
+EX016,ORD0097,,Pickup Missed,High,Logistics Team,Staging,Courier did not collect the box during the pickup slot.,In Progress,2026-10-06 17:47:00.000000,,Being looked into.
+EX005,ORD0016,,Inventory Shortage,High,Warehouse Team,Picking,Required stock is not on the shelf in Main.,Open,2026-10-06 17:30:00.000000,,No action yet.
+EX015,ORD0119,,Pickup Missed,High,Logistics Team,Staging,Courier did not collect the box during the pickup slot.,Resolved,2026-10-06 16:59:00.000000,2026-10-06 18:00:00.000000,Pickup rebooked for the next slot.
+EX012,ORD0073,,Pickup Missed,High,Logistics Team,Staging,Courier did not collect the box during the pickup slot.,In Progress,2026-10-06 16:45:00.000000,,Being looked into.
+EX009,ORD0067,,Box Misplaced,Medium,Warehouse Team,Staging,Packed order could not be found in staging.,Open,2026-10-06 16:32:00.000000,,No action yet.
+EX013,ORD0255,,Pickup Missed,High,Logistics Team,Staging,Courier did not collect the box during the pickup slot.,In Progress,2026-10-06 16:31:00.000000,,Being looked into.
+EX006,ORD0121,,Wrong Variant,High,Warehouse Team,Packing,Packed item does not match the variant on the order.,Open,2026-10-06 16:28:00.000000,,No action yet.
+EX003,ORD0136,,Inventory Shortage,High,Warehouse Team,Picking,Required stock is not on the shelf in Main.,Open,2026-10-06 15:32:00.000000,,No action yet.
+EX004,ORD0149,,Inventory Shortage,High,Warehouse Team,Picking,Required stock is not on the shelf in Main.,Open,2026-10-06 15:31:00.000000,,No action yet.
+EX007,ORD0080,,Wrong Variant,High,Warehouse Team,Packing,Packed item does not match the variant on the order.,In Progress,2026-10-06 15:16:00.000000,,Being looked into.
+EX008,ORD0060,,Wrong Variant,High,Warehouse Team,Packing,Packed item does not match the variant on the order.,Resolved,2026-10-06 15:04:00.000000,2026-10-06 18:00:00.000000,Correct variant re-picked and verified.
+EX011,ORD0035,,Pickup Missed,High,Logistics Team,Staging,Courier did not collect the box during the pickup slot.,Resolved,2026-10-06 14:47:00.000000,2026-10-06 16:05:41.379897,Pickup rebooked for the next slot.
+EX014,ORD0175,,Pickup Missed,High,Logistics Team,Staging,Courier did not collect the box during the pickup slot.,In Progress,2026-10-06 14:47:00.000000,,Being looked into.
+EX002,ORD0157,,Inventory Shortage,High,Warehouse Team,Picking,Required stock is not on the shelf in Main.,In Progress,2026-10-06 14:03:00.000000,,Being looked into.
+EX001,ORD0250,,Inventory Shortage,High,Warehouse Team,Picking,Required stock is not on the shelf in Main.,In Progress,2026-10-06 12:35:00.000000,,Being looked into.
+EX020,ORD0002,,Box Misplaced,Medium,Warehouse Team,Staging,Packed order could not be found in staging.,Resolved,2026-10-06 05:56:14.153566,2026-10-06 07:05:29.847495,"Box located, moved back to staging."
+EX022,ORD0001,,Pickup Missed,High,Logistics Team,Staging,Courier did not collect the box during the pickup slot.,Resolved,2026-10-06 05:14:29.841441,2026-10-06 06:39:35.494224,Pickup rebooked for the next slot.
+EX023,ORD0003,,Wrong Variant,High,Warehouse Team,Packing,Packed item does not match the variant on the order.,Resolved,2026-10-05 23:58:07.338158,2026-10-06 02:18:56.547405,Correct variant re-picked and verified.
+EX019,ORD0001,,Wrong Variant,High,Warehouse Team,Packing,Packed item does not match the variant on the order.,Resolved,2026-10-05 22:37:59.894294,2026-10-06 01:09:14.477900,Correct variant re-picked and verified.
+EX017,,P01-SQU,Stock Discrepancy,Medium,Operations Team,Inventory,Physical count is lower than the system quantity.,In Progress,2026-10-05 17:30:00.000000,,Being looked into.
+EX021,ORD0014,,Inventory Shortage,High,Warehouse Team,Picking,Required stock is not on the shelf in Main.,Resolved,2026-10-05 17:19:00.000000,2026-10-05 18:30:23.135867,Stock transferred from Backup warehouse.
+EX018,,P01-REC,Stock Discrepancy,Medium,Operations Team,Inventory,Physical count is lower than the system quantity.,Resolved,2026-10-05 15:30:00.000000,2026-10-05 18:37:59.301242,System quantity corrected after physical count.

@@ -1,0 +1,5 @@
+courier_id,courier_name,service,cost_per_shipment,speed_days,label_cutoff,pickup_time,note
+C1,Speedex,Express,60,1,12:30,14:00,Fastest. Held for priority orders.
+C2,Metro Logistics,Express,52,2,14:30,16:00,Mid-cost cover when Speedex is full.
+C3,ShipFast,Standard,45,2,15:30,17:00,Default for regular orders.
+C4,ValueCourier,Economy,30,3,17:00,18:30,Cheapest. Only option left after 15:30.

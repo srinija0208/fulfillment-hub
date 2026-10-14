@@ -1,0 +1,7 @@
+inbound_id,supplier,product_id,quantity,eta_ts,status
+IN001,Kochi Steel Works,P09-REC,25,2026-10-06 22:00:00,In Transit
+IN002,Sri Balaji Plastics,P11-TAL,31,2026-10-07 14:00:00,In Transit
+IN003,Anand Ceramics,P04-SQU,50,2026-10-06 15:00:00,Received - Awaiting Check
+IN004,Anand Ceramics,P03-ROU,25,2026-10-06 15:00:00,Put Away
+IN005,Nova Kitchenware,P12-PLA,42,2026-10-06 13:00:00,Received - Awaiting Check
+IN006,Kochi Steel Works,P08-REC,33,2026-10-06 15:00:00,Put Away

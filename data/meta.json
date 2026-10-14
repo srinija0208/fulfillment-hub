@@ -1,0 +1,7 @@
+{
+  "snapshot_ts": "2026-10-06T18:00:00",
+  "generated_by": "generate_data.py",
+  "seed": 42,
+  "orders_today": 250,
+  "note": "All event timestamps (stages, labels, exceptions) are <= snapshot_ts. SLA deadlines and inbound ETAs are future-looking by nature. The app treats snapshot_ts as 'now'."
+}

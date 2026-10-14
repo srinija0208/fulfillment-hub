@@ -1,0 +1,27 @@
+product_id,product_name,variant,category,unit_price
+P01-ROU,Plate 6in,Round,Plates,129
+P01-SQU,Plate 6in,Square,Plates,129
+P01-REC,Plate 6in,Rectangular,Plates,129
+P02-ROU,Plate 8in,Round,Plates,179
+P03-ROU,Plate 12in,Round,Plates,249
+P04-ROU,Bowl 5in,Round,Bowls,149
+P04-SQU,Bowl 5in,Square,Bowls,149
+P04-HEA,Bowl 5in,Heart,Bowls,149
+P05-ROU,Bowl 7in,Round,Bowls,199
+P05-SQU,Bowl 7in,Square,Bowls,199
+P06-ROU,Bowl 9in,Round,Bowls,279
+P07-REC,Tray 22x12,Rectangular,Trays,349
+P08-REC,Tray Round 9in,Rectangular,Trays,299
+P09-REC,Tray Heart 6in,Rectangular,Trays,189
+P09-ROU,Tray Heart 6in,Round,Trays,189
+P09-HEA,Tray Heart 6in,Heart,Trays,189
+P10-REG,Cup 200ml,Regular,Cups,119
+P11-REG,Cup 300ml,Regular,Cups,149
+P11-TAL,Cup 300ml,Tall,Cups,149
+P12-PLA,Fork,Plain,Cutlery,79
+P12-POL,Fork,Polished,Cutlery,79
+P12-GOL,Fork,Gold,Cutlery,79
+P13-PLA,Spoon,Plain,Cutlery,79
+P13-POL,Spoon,Polished,Cutlery,79
+P13-GOL,Spoon,Gold,Cutlery,79
+P14-PLA,Knife,Plain,Cutlery,89
