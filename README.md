@@ -3,7 +3,7 @@
 A single-screen operations dashboard for XYZ Fulfilment: where every order is, what is late,
 what to do next, whether the pickers can actually pick it, and which problems are still open.
 
-**Live demo:** _paste your Streamlit link here_
+**Live demo:** [https://fulfillment-app-demo.streamlit.app/]
 
 ## The four screens
 | Tab | Problem it answers |
