@@ -219,8 +219,8 @@ with tab1:
         cols = st.columns(len(head))
         for col, (_, row) in zip(cols, head.iterrows()):
             with col:
-                st.markdown(f"**{row['order_id']}**  \n{badge(row['priority'])}  \n"
-                            f"{row['courier_name']}")
+                tag = "🔴 Priority" if row["priority"] else "Regular"
+                st.markdown(f"**{row['order_id']}**  \n{tag}  \n{row['courier_name']}")
                 st.caption(f"waiting {row['hours_in_stage']:.0f}h")
                 if st.button("Create label", key=f"label_{row['order_id']}",
                              width="stretch"):
@@ -285,7 +285,7 @@ with tab1:
         row = o.loc[o["order_id"] == picked].iloc[0]
         d1, d2 = st.columns([2, 3])
         with d1:
-            st.markdown(f"### {row['order_id']}  {badge(row['priority'])}")
+            st.markdown(f"### {row['order_id']}" + ("  ·  🔴 Priority" if row["priority"] else ""))
             st.markdown(
                 f"**{row['customer_name']}** · {row['city']}  \n"
                 f"Channel: **{row['channel']}** · Value: **₹{row['order_value']:,}**  \n"
@@ -484,9 +484,9 @@ with tab3:
     e1.metric("Open", metrics["open"])
     e2.metric("In progress", metrics["in_progress"])
     e3.metric("Resolved", metrics["resolved"])
-    e4.metric("🔴 Open, high severity", metrics["open_high"])
+    e4.metric("🔴 Unresolved, high severity", metrics["open_high"])
     e5.metric("Avg. time to resolve", f"{metrics['avg_resolve_hours']:.1f} h")
-    e6.metric("Oldest open exception", f"{metrics['oldest_open_hours']:.1f} h")
+    e6.metric("Oldest unresolved exception", f"{metrics['oldest_open_hours']:.1f} h")
 
     left, right = st.columns([3, 2])
     with left:
@@ -503,9 +503,9 @@ with tab3:
         st.markdown(
             f"- **{top.index[0]}** is the most frequent exception ({int(top.iloc[0])} logged) - "
             "worth fixing at the source, not the symptom.\n"
-            f"- **{len(stuck_open)}** exception(s) have been open more than 12 hours: exactly the "
+            f"- **{len(stuck_open)}** exception(s) have been unresolved for more than 12 hours: exactly the "
             "case where things get forgotten.\n"
-            f"- **{metrics['open_high']}** open exception(s) are high severity and affect a "
+            f"- **{metrics['open_high']}** open unresolved exception(s) are high severity and affect a "
             "customer's delivery date.\n"
             f"- Average resolution time is **{metrics['avg_resolve_hours']:.1f} h** - "
             "use it as the baseline to beat."
@@ -638,11 +638,12 @@ with tab4:
                                           "courier_name": "Courier"}),
                      width="stretch", hide_index=True)
 
-    if transfer:
+    transfer_only = transfer - blocked
+    if transfer_only:
         st.subheader("🔄 Waiting for a stock transfer")
         st.caption("The stock is in Backup. Record the transfer on the Inventory Control tab "
                    "and these orders move into the pick list.")
-        held = o[o["order_id"].isin(transfer)][["order_id", "priority", "hours_in_stage",
+        held = o[o["order_id"].isin(transfer_only)][["order_id", "priority", "hours_in_stage",
                                                 "courier_name"]].copy()
         held["priority"] = held["priority"].map(badge)
         st.dataframe(held.rename(columns={"order_id": "Order", "priority": "Priority",
@@ -664,7 +665,8 @@ with tab4:
                                      "courier_name": "Courier", "pickup_slot": "Pickup",
                                      "slot_status": "Slot", "hours_in_stage": "Hrs in staging"}),
                    ["Slot"]),
-            width="stretch", hide_index=True)
+            width="stretch", hide_index=True,
+            column_config={"Hrs in staging": st.column_config.NumberColumn(format="%.1f h")})
         st.caption("If a slot has gone and the box is still here, the courier owes a pickup - "
                    "tell the office team so it is not forgotten.")
         with st.expander("Hand a box to the courier"):

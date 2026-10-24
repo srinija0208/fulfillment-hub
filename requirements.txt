@@ -1,3 +1,5 @@
 streamlit==1.65.0
 pandas>=2.2,<4
 numpy>=1.26
+
+# app link: https://fulfillment-app-demo.streamlit.app/
